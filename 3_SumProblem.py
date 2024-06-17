@@ -26,16 +26,17 @@ def ThreeSum(inparr):
                     elif sum<0:
                         l=l+1
                     elif sum==0:
-                        #triplet=[inparr[i],inparr[l],inparr[r]]
-                        triplet=str(inparr[i])+", "+str(inparr[l])+", "+str(inparr[r])
+                        triplet=[inparr[i],inparr[l],inparr[r]]
+                        resarr.append(triplet)
+                        #triplet=str(inparr[i])+", "+str(inparr[l])+", "+str(inparr[r])
                         l=l+1
-                        if triplet not in numDict:
+                        """ if triplet not in numDict:
                             numDict[triplet]=i                        
-                            resarr.append(triplet)
+                            resarr.append(triplet)"""
                 
             
     print("Result is :",resarr)       
     return resarr      
 
-test= [0, 0, 0, 0, 0, 0]
+test= [-3,4,3,-3,1,2]
 print(ThreeSum(test))

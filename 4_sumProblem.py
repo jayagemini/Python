@@ -32,16 +32,11 @@ def four_sum(arr, target):
                 elif arr[l]+arr[r]<target:
                     l=l+1
                 elif arr[l]+arr[r]==target:
-                    quad=quad+ [arr[l],arr[r]]
-                    check = ''.join(str(quad) )                   
-                    if check not in numDict:
-                        numDict[check]=quad                        
-                        check=''   
+                    res.append(quad+ [arr[l],arr[r]])
                     l=l+1
                     while l<r and arr[l]==arr[l-1]:
                          l=l+1
-        for value in numDict.values():
-            res.append(value)   
+        
     kSum(4,0,target,quad)                 
     return res
 
